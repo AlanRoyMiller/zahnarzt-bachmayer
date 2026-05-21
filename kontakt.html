@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Zahnarzt Hallein | Dr. Martha L. Bachmayer</title>
+  <meta name="description" content="Kontakt zur Zahnarztpraxis Dr. Bachmayer in Hallein. Praschweg 22, 5400 Hallein. Tel: 06245-80756. Alle Kassen. Termin online oder telefonisch.">
+  <link rel="canonical" href="https://www.zahnarzt-hallein.at/kontakt.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .phone-big { display:inline-flex; align-items:center; gap:var(--s-3); font-size:clamp(28px,5vw,48px); font-weight:700; color:var(--c-primary); text-decoration:none; letter-spacing:-0.01em; transition:opacity 0.15s; }
+    .phone-big:hover { opacity:0.75; }
+    .phone-big svg { width:36px; height:36px; flex-shrink:0; }
+    .contact-grid { display:grid; gap:var(--s-6); }
+    @media(min-width:768px){ .contact-grid { grid-template-columns:1fr 1fr; } }
+    @media(min-width:1024px){ .contact-grid { grid-template-columns:1fr 1fr 1fr; } }
+    .contact-form { display:flex; flex-direction:column; gap:var(--s-4); }
+    .form-group { display:flex; flex-direction:column; gap:var(--s-2); }
+    .form-label { font-size:14px; font-weight:600; color:var(--c-text); }
+    .form-input, .form-textarea { width:100%; padding:var(--s-3) var(--s-4); border:1.5px solid var(--c-border); border-radius:var(--r-md); font-family:var(--font); font-size:15px; color:var(--c-text); background:var(--c-surface); transition:border-color 0.15s, box-shadow 0.15s; outline:none; }
+    .form-input:focus, .form-textarea:focus { border-color:var(--c-primary); box-shadow:0 0 0 3px rgba(139,26,139,0.12); }
+    .form-textarea { min-height:130px; resize:vertical; }
+    .form-success { display:none; background:var(--c-primary-light); border:1.5px solid var(--c-primary); border-radius:var(--r-md); padding:var(--s-4) var(--s-5); color:var(--c-primary); font-weight:600; font-size:15px; }
+    .form-success.visible { display:block; }
+    .map-wrap { border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--c-border); aspect-ratio:4/3; }
+    .map-wrap iframe { width:100%; height:100%; display:block; border:0; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="site-logo" aria-label="Startseite">
+        <img src="assets/logo-icon.png" alt="" class="logo-icon" width="36" height="40" aria-hidden="true" onerror="this.style.display='none'">
+        <span class="site-logo-text"><span class="qualifier">Dr. med. dent.</span><span class="name">Martha L. Bachmayer</span></span>
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="implantologie.html">Implantologie</a><a href="angstpatienten.html">Angstpatienten</a><a href="team.html">Team</a><a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a href="tel:+436245807560" class="btn btn-primary btn-sm header-cta"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg>Termin vereinbaren</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation" aria-hidden="true">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header"><span class="site-logo-text"><span class="qualifier" style="color:var(--c-text-muted);font-size:11px;">Dr. med. dent.</span><span class="name" style="color:var(--c-primary);font-size:15px;font-weight:700;">Martha L. Bachmayer</span></span><button class="mobile-menu-close" aria-label="Menü schließen"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+      <nav class="mobile-nav"><a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="implantologie.html">Implantologie</a><a href="angstpatienten.html">Angstpatienten</a><a href="kinderzahnmedizin.html">Kinderzahnmedizin</a><a href="team.html">Unser Team</a><a href="kontakt.html">Kontakt</a></nav>
+      <div class="mobile-menu-footer"><div class="mobile-menu-contact"><a href="tel:+436245807560">06245-80756</a></div><a href="tel:+436245807560" class="btn btn-primary" style="width:100%;justify-content:center;">Jetzt anrufen</a></div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">Kontakt</span>
+        </nav>
+        <p class="page-hero-label">Wir sind für Sie da</p>
+        <h1 class="page-hero-title" id="page-title">Termin vereinbaren</h1>
+        <p class="page-hero-subtitle">
+          Rufen Sie uns an oder schreiben Sie uns. Wir melden uns schnell bei Ihnen.
+        </p>
+      </div>
+    </section>
+
+    <!-- TELEFON CTA -->
+    <section class="section section--white" style="padding-bottom:0;">
+      <div class="container" style="text-align:center;">
+        <p style="font-size:14px;font-weight:600;color:var(--c-text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:var(--s-3);">Am schnellsten erreichen Sie uns per Telefon</p>
+        <a href="tel:+436245807560" class="phone-big" aria-label="Zahnarztpraxis anrufen: 06245-80756">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg>
+          06245-80756
+        </a>
+        <p style="font-size:13px;color:var(--c-text-muted);margin-top:var(--s-3);">Mo–Fr und nach Vereinbarung</p>
+      </div>
+    </section>
+
+    <!-- KONTAKT DETAILS + FORMULAR -->
+    <section class="section section--white" aria-labelledby="kontakt-info-title">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Adresse & Öffnungszeiten -->
+          <div class="contact-card reveal">
+            <h2 class="contact-card-title" id="kontakt-info-title">Adresse &amp; Öffnungszeiten</h2>
+            <address style="font-style:normal;">
+              <p style="font-weight:600;color:var(--c-text);margin-bottom:var(--s-2);">Zahnarztpraxis Dr. Martha L. Bachmayer</p>
+              <p style="color:var(--c-text-2);margin-bottom:var(--s-5);">Praschweg 22<br>5400 Hallein, Österreich</p>
+              <div style="display:flex;flex-direction:column;gap:var(--s-2);margin-bottom:var(--s-5);">
+                <a href="tel:+436245807560" style="display:flex;align-items:center;gap:var(--s-2);color:var(--c-primary);font-weight:600;text-decoration:none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg>
+                  06245-80756
+                </a>
+                <a href="mailto:office@zahnarzt-hallein.at" style="display:flex;align-items:center;gap:var(--s-2);color:var(--c-text-2);text-decoration:none;font-size:14px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  office@zahnarzt-hallein.at
+                </a>
+              </div>
+            </address>
+            <table class="hours-table" aria-label="Öffnungszeiten">
+              <tbody>
+                <tr><th scope="row">Montag</th><td>07:30 – 12:00</td><td>13:00 – 18:00</td></tr>
+                <tr><th scope="row">Dienstag</th><td>07:30 – 12:00</td><td>13:00 – 18:00</td></tr>
+                <tr><th scope="row">Mittwoch</th><td>07:30 – 12:00</td><td>–</td></tr>
+                <tr><th scope="row">Donnerstag</th><td>07:30 – 12:00</td><td>13:00 – 18:00</td></tr>
+                <tr><th scope="row">Freitag</th><td>07:30 – 12:00</td><td>–</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:12px;color:var(--c-text-muted);margin-top:var(--s-3);">Termine nach Vereinbarung auch außerhalb der Öffnungszeiten möglich.</p>
+          </div>
+
+          <!-- Formular -->
+          <div class="contact-card reveal">
+            <h2 class="contact-card-title">Nachricht senden</h2>
+            <form class="contact-form" action="#" method="post" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="kontakt-name">Ihr Name <span aria-label="Pflichtfeld">*</span></label>
+                <input class="form-input" type="text" id="kontakt-name" name="name" autocomplete="name" required placeholder="Max Mustermann">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="kontakt-tel">Telefonnummer</label>
+                <input class="form-input" type="tel" id="kontakt-tel" name="telefon" autocomplete="tel" placeholder="06xx 123 456">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="kontakt-email">E-Mail <span aria-label="Pflichtfeld">*</span></label>
+                <input class="form-input" type="email" id="kontakt-email" name="email" autocomplete="email" required placeholder="ihre@email.at">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="kontakt-msg">Ihre Nachricht <span aria-label="Pflichtfeld">*</span></label>
+                <textarea class="form-textarea" id="kontakt-msg" name="nachricht" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+              </div>
+              <div class="form-success" id="form-success" role="alert">
+                Vielen Dank. Ihre Nachricht wurde erfolgreich versendet.
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="align-self:flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Nachricht senden
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KARTE -->
+    <section class="section section--alt" aria-labelledby="map-title">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <span class="section-label">Anfahrt</span>
+          <h2 class="section-title" id="map-title">So finden Sie uns</h2>
+          <p class="section-subtitle">Praschweg 22, 5400 Hallein – mit dem Auto, Bus oder zu Fuß gut erreichbar.</p>
+        </header>
+        <div class="map-wrap reveal">
+          <iframe
+            title="Standort Zahnarztpraxis Dr. Bachmayer Hallein"
+            src="https://maps.google.com/maps?q=Praschweg+22,+5400+Hallein,+Austria&z=15&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div style="text-align:center;margin-top:var(--s-5);">
+          <a href="https://maps.google.com/?q=Praschweg+22,+5400+Hallein" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+            Route in Google Maps öffnen
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="assets/logo-icon.png" alt="" width="36" height="40" aria-hidden="true" onerror="this.style.display='none'"><span class="footer-logo-text"><span class="qualifier">Dr. med. dent.</span><span class="name">Martha L. Bachmayer</span></span></a><p class="footer-tagline">Zahnarztpraxis in Hallein. Alle Kassen. Modern und einfühlsam.</p></div>
+        <div><p class="footer-section-title">Navigation</p><nav class="footer-links"><a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="team.html">Unser Team</a><a href="kontakt.html">Kontakt</a></nav></div>
+        <div><p class="footer-section-title">Leistungen</p><nav class="footer-links"><a href="implantologie.html">Implantologie</a><a href="leistungen.html#kronen">Kronen &amp; Zahnersatz</a><a href="leistungen.html#prophylaxe">Prophylaxe</a><a href="kinderzahnmedizin.html">Kinderzahnmedizin</a><a href="angstpatienten.html">Angstpatienten</a><a href="leistungen.html#laser">Bio Laser</a></nav></div>
+        <div><p class="footer-section-title">Kontakt</p><address style="font-style:normal;" class="footer-contact-items"><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg><span>Praschweg 22, 5400 Hallein</span></div><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg><a href="tel:+436245807560">06245-80756</a></div></address></div>
+      </div>
+    </div>
+    <div class="container"><div class="footer-bottom"><p>© 2025 Dr. med. dent. Martha L. Bachmayer – Zahnarztpraxis Hallein</p><nav class="footer-legal"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav></div></div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Schnellzugriff">
+    <a href="tel:+436245807560" class="mobile-bar-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.5 16z"/></svg>Anrufen</a>
+    <a href="https://maps.google.com/?q=Praschweg+22,+5400+Hallein" target="_blank" rel="noopener noreferrer" class="mobile-bar-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>Route</a>
+    <a href="kontakt.html" class="mobile-bar-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Kontakt</a>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
