@@ -434,7 +434,7 @@ p { max-width: 70ch; }
   display: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1080px) {
   .header-cta {
     display: inline-flex;
   }
