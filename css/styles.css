@@ -622,7 +622,7 @@ p { max-width: 70ch; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
-  min-height: calc(100svh - var(--header-h));
+  min-height: 0;
 }
 
 @media (min-width: 768px) {
@@ -742,13 +742,15 @@ p { max-width: 70ch; }
   position: relative;
   order: 2;
   overflow: hidden;
-  min-height: 280px;
+  min-height: 260px;
+  max-height: 380px;
 }
 
 @media (min-width: 768px) {
   .hero-image {
     order: unset;
     min-height: auto;
+    max-height: none;
   }
 }
 
@@ -825,8 +827,12 @@ p { max-width: 70ch; }
 /* ─── SERVICE CARDS ──────────────────────────────────────────── */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--s-4);
+}
+
+@media (min-width: 400px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 640px) {
