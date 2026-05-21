@@ -633,7 +633,7 @@ p { max-width: 70ch; }
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .hero-inner {
     grid-template-columns: 1fr 1fr;
   }
@@ -656,7 +656,7 @@ p { max-width: 70ch; }
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .hero-content {
     padding: var(--s-20) var(--s-16) var(--s-20) calc((100vw - var(--max-w-xl)) / 2 + var(--s-8));
     max-width: none;
