@@ -633,7 +633,7 @@ p { max-width: 70ch; }
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .hero-inner {
     grid-template-columns: 1fr 1fr;
   }
